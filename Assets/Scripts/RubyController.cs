@@ -1,42 +1,62 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RubyController : MonoBehaviour
 {
-    void Start()
-    {
-        // QualitySettings.vSyncCount = 0;
-        // Application.targetFrameRate = 30;
+    public float speed = 3.0f;
 
+    public int maxHealth = 5;
+    public int Health => _currentHealth;
+    private int _currentHealth;
+    
+    public float timeInvincible = 2.0f;
+    private bool _isInvincible;
+    private float _invincibleTimer;
+
+    private Rigidbody2D _rigidbody2D;
+    private float _horizontal;
+    private float _vertical;
+
+    private void Start()
+    {
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+
+        _currentHealth = maxHealth;
     }
 
-    void Update()
+    private void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        Debug.Log($"Horizontal: {horizontal}");
+        _horizontal = Input.GetAxis("Horizontal");
+        _vertical = Input.GetAxis("Vertical");
         
-        float vertical = Input.GetAxis("Vertical");
-        Debug.Log($"Vertical: {vertical}");
-        
-        Vector2 rubyPosition = transform.position;
-        rubyPosition.x = rubyPosition.x + 5f * horizontal * Time.deltaTime;
-        rubyPosition.y = rubyPosition.y + 5f * vertical * Time.deltaTime;
-        
-        transform.position = rubyPosition;
+        if (_isInvincible)
+        {
+            _invincibleTimer -= Time.deltaTime;
+            if (_invincibleTimer < 0)
+                _isInvincible = false;
+        }
     }
-    
-    private IEnumerator WaitAndPrint()
+
+    private void FixedUpdate()
     {
-        // suspend execution for 5 seconds
-        yield return new WaitForSeconds(5);
-        Debug.Log("WaitAndPrint " + Time.time);
+        var position = _rigidbody2D.position;
+        position.x = position.x + speed * _horizontal * Time.deltaTime;
+        position.y = position.y + speed * _vertical * Time.deltaTime;
+
+        _rigidbody2D.MovePosition(position);
     }
-    
-    private IEnumerable<int> GetNumbers()
+
+    public void ChangeHealth(int amount)
     {
-        yield return 1;
-        yield return 2;
-        yield return 3;
+        if (amount < 0)
+        {
+            if (_isInvincible)
+                return;
+
+            _isInvincible = true;  // Ruby will be hit in the next physics update.
+            _invincibleTimer = timeInvincible;
+        }
+        
+        _currentHealth = Mathf.Clamp(_currentHealth + amount, 0, maxHealth);
+        Debug.Log($"Health: {_currentHealth} / {maxHealth}");
     }
 }
