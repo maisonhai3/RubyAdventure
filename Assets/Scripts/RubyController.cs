@@ -7,7 +7,7 @@ public class RubyController : MonoBehaviour
     public int maxHealth = 5;
     public int Health => _currentHealth;
     private int _currentHealth;
-    
+
     public float timeInvincible = 2.0f;
     private bool _isInvincible;
     private float _invincibleTimer;
@@ -27,11 +27,11 @@ public class RubyController : MonoBehaviour
     {
         _horizontal = Input.GetAxis("Horizontal");
         _vertical = Input.GetAxis("Vertical");
-        
+
         if (_isInvincible)
         {
             _invincibleTimer -= Time.deltaTime;
-            if (_invincibleTimer < 0)
+            if (_invincibleTimer <= 0)
                 _isInvincible = false;
         }
     }
@@ -52,10 +52,10 @@ public class RubyController : MonoBehaviour
             if (_isInvincible)
                 return;
 
-            _isInvincible = true;  // Ruby will be hit in the next physics update.
-            _invincibleTimer = timeInvincible;
+            _isInvincible = true; // Ruby will be hit in the next physics update.
+            _invincibleTimer = timeInvincible; // Reset the timer.
         }
-        
+
         _currentHealth = Mathf.Clamp(_currentHealth + amount, 0, maxHealth);
         Debug.Log($"Health: {_currentHealth} / {maxHealth}");
     }
