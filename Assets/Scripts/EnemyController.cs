@@ -12,9 +12,14 @@ public class EnemyController2 : MonoBehaviour
     private float _turnTimer;
     private int direction = 1;
 
+    private Animator _animator;
+
     private void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
+
+        _turnTimer = turnTime;
     }
 
     private void FixedUpdate()
@@ -22,9 +27,17 @@ public class EnemyController2 : MonoBehaviour
         var position = _rigidbody2D.position;
         
         if (vertical)
+        {
             position.y = position.y + Time.deltaTime * speed;
+            _animator.SetFloat("Move X", 0);
+            _animator.SetFloat("Move Y", direction);
+        }
         else
+        {
+            _animator.SetFloat("Move Y", direction);
+            _animator.SetFloat("Move X", 0);
             position.x = position.x + Time.deltaTime * speed;
+        }
 
         _rigidbody2D.MovePosition(position);
     }
