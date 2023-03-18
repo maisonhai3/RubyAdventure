@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class RubyController : MonoBehaviour
 {
+    private Animator _animator;
+    private Vector2 lookDirection = new(1, 0);
+    
     public float speed = 3.0f;
 
     public int maxHealth = 5;
@@ -19,6 +22,7 @@ public class RubyController : MonoBehaviour
     private void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
 
         _currentHealth = maxHealth;
     }
@@ -27,13 +31,23 @@ public class RubyController : MonoBehaviour
     {
         _horizontal = Input.GetAxis("Horizontal");
         _vertical = Input.GetAxis("Vertical");
+        
+        Vector2 move = new(_horizontal, _vertical);
 
-        if (_isInvincible)
+        if (!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f))
         {
-            _invincibleTimer -= Time.deltaTime;
-            if (_invincibleTimer <= 0)
-                _isInvincible = false;
+            lookDirection.Set(move.x, move.y);
+            lookDirection.Normalize();
         }
+        
+        _animator.SetFloat("Look X", lookDirection.x);
+        _animator.SetFloat("Look Y", lookDirection.y);
+        _animator.SetFloat("Speed", move.magnitude);
+
+        if (!_isInvincible) return;
+        _invincibleTimer -= Time.deltaTime;
+        if (_invincibleTimer <= 0)
+            _isInvincible = false;
     }
 
     private void FixedUpdate()
@@ -49,6 +63,8 @@ public class RubyController : MonoBehaviour
     {
         if (amount < 0)
         {
+            _animator.SetTrigger("Hit");
+            
             if (_isInvincible)
                 return;
 
