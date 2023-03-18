@@ -14,13 +14,13 @@ namespace Gameplay
         private readonly float speedUpTimer = 4;
         private int direction = 3;
 
-        private Animator _animator;
+        private Animator animator;
         private Rigidbody2D rigidbody2D;
 
         private void Start()
         {
             rigidbody2D = GetComponent<Rigidbody2D>();
-            _animator = GetComponent<Animator>();
+            animator = GetComponent<Animator>();
 
             timer = changeTime;
         }
@@ -50,14 +50,14 @@ namespace Gameplay
             if (vertical)
             {
                 position.y += Time.deltaTime * speed * direction;
-                _animator.SetFloat("Move X", 0);
-                _animator.SetFloat("Move Y", direction);
+                animator.SetFloat("Move X", 0);
+                animator.SetFloat("Move Y", direction);
             }
             else
             {
                 position.x = position.x + Time.deltaTime * speed * direction;
-                _animator.SetFloat("Move X", direction);
-                _animator.SetFloat("Move Y", 0);
+                animator.SetFloat("Move X", direction);
+                animator.SetFloat("Move Y", 0);
             }
 
             rigidbody2D.MovePosition(position);
@@ -78,7 +78,7 @@ namespace Gameplay
             broken = false;
             rigidbody2D.simulated = false;
 
-            _animator.SetTrigger("Fixed");
+            animator.SetTrigger("Fixed");
         }
     }
 }

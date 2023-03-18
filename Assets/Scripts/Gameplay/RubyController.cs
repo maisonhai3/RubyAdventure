@@ -48,10 +48,12 @@ namespace Gameplay
             animator.SetFloat("Look Y", lookDirection.y);
             animator.SetFloat("Speed", move.magnitude);
             
-            if (!isInvincible) return;
-            invincibleTimer -= Time.deltaTime;
-            if (invincibleTimer <= 0)
-                isInvincible = false;
+            if (isInvincible)
+            {
+                invincibleTimer -= Time.deltaTime;
+                if (invincibleTimer <= 0)
+                    isInvincible = false;
+            }
 
             if (Input.GetKeyDown(KeyCode.C))
                 Launch();
