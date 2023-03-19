@@ -4,18 +4,22 @@ namespace Gameplay
 {
     public class EnemyController : MonoBehaviour
     {
-        private bool broken = true;
-
-        // How long the enemy will wait before turning around.
+        public ParticleSystem smokeEffect;
+        
+        private Animator animator;
+        private Rigidbody2D rigidbody2D;
+        
         public float speed;
         public bool vertical;
         public float changeTime = 3.0f;
+        
+        private bool broken = true;
+
+        // How long the enemy will wait before turning around.
         private float timer;
         private readonly float speedUpTimer = 4;
         private int direction = 3;
-
-        private Animator animator;
-        private Rigidbody2D rigidbody2D;
+        private AudioSource audioSource;
 
         private void Start()
         {
@@ -79,6 +83,12 @@ namespace Gameplay
             rigidbody2D.simulated = false;
 
             animator.SetTrigger("Fixed");
+            smokeEffect.Stop();
+        }
+        
+        public void PlaySound(AudioClip clip)
+        {
+            audioSource.PlayOneShot(clip);
         }
     }
 }

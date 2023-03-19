@@ -5,7 +5,9 @@ namespace Gameplay
     public class RubyController : MonoBehaviour
     {
         public GameObject projectilePrefab;
+        public AudioClip getHitClip;
         
+        private AudioSource audioSource;
         private Animator animator;
         private Rigidbody2D rigidbody2D;
         
@@ -27,6 +29,7 @@ namespace Gameplay
         {
             rigidbody2D = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
+            audioSource = GetComponent<AudioSource>();
 
             currentHealth = maxHealth;
         }
@@ -73,6 +76,7 @@ namespace Gameplay
             if (amount < 0)
             {
                 animator.SetTrigger("Hit");
+                audioSource.PlayOneShot(getHitClip);
 
                 if (isInvincible)
                     return;
@@ -93,6 +97,11 @@ namespace Gameplay
             projectile.Launch(lookDirection, 300);
             
             animator.SetTrigger("Launch");
+        }
+        
+        public void PlaySound(AudioClip clip)
+        {
+            audioSource.PlayOneShot(clip);
         }
     }    
 }
