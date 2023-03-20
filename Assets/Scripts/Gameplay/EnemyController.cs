@@ -51,18 +51,13 @@ namespace Gameplay
 
             var position = rigidbody2D.position;
 
-            if (vertical)
-            {
-                position.y += Time.deltaTime * speed * direction;
-                animator.SetFloat("Move X", 0);
-                animator.SetFloat("Move Y", direction);
-            }
-            else
-            {
-                position.x = position.x + Time.deltaTime * speed * direction;
-                animator.SetFloat("Move X", direction);
-                animator.SetFloat("Move Y", 0);
-            }
+            var xRandomNumber = Random.Range(-3f, 3f);
+            var yRandomNumber = Random.Range(-3f, 3f);
+            position.y += Time.deltaTime * speed * direction * yRandomNumber;
+            position.x += Time.deltaTime * speed * direction * xRandomNumber;
+            animator.SetFloat("Move X", direction);
+            animator.SetFloat("Move Y", direction);
+            
 
             rigidbody2D.MovePosition(position);
         }
