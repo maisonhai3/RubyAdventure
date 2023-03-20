@@ -86,7 +86,7 @@ namespace Gameplay
             }
 
             currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-            Debug.Log($"Health: {currentHealth} / {maxHealth}");
+            UIHealthBar.Instance.SetValue(currentHealth / (float) maxHealth);
         }
 
         private void Launch()
