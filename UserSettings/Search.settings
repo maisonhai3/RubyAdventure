@@ -7,9 +7,9 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.DA949528" = "light mode"
+	"last_search.DA949528" = "animation"
 	"OpenInspectorPreview.DA949528" = "0"
-	"currentGroup.DA949528" = "all"
+	"currentGroup.DA949528" = "menu"
 }
 providers = {
 	adb = {
@@ -56,6 +56,7 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"an"
 	"MetalCube "
 	"ti"
 	"qu"

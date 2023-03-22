@@ -66,7 +66,11 @@ namespace Gameplay
                 var hit = Physics2D.Raycast(rigidbody2D.position + Vector2.up * 0.2f, lookDirection, 1.5f, LayerMask.GetMask("NPC"));
                 if (hit.collider != null)
                 {
-                    Debug.Log("Raycast has hit the object " + hit.collider.gameObject);
+                    var npc = hit.collider.GetComponent<NonPlayerCharacter>();
+                    if (npc != null)
+                    {
+                        npc.DisplayDialog();
+                    }
                 }
             }
         }
