@@ -5,17 +5,23 @@ namespace DesignPatterns
 {
     public class BrokenRobot : NPC 
     {
-        
-        private void Awake()
+
+        public override void Awake()
+        {
+            // Do what the base class does
+            base.Awake();
+            
+            wanderBehavior = new FourDirectionWander();
+        }
+        private void Start()
         {
             wanderBehavior = new FourDirectionWander();
-            rb = gameObject.GetComponent<Rigidbody2D>();
         }
 
         private void FixedUpdate()
         {
             // Move the robot the the position that wanderBehavior.NextDirection() returns
-            rb.MovePosition(rb.position + wanderBehavior.NextDirection());
+            rigidBody.MovePosition(rigidBody.position + wanderBehavior.NextDirection());
         }
     }
 }
