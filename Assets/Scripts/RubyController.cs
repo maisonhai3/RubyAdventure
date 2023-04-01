@@ -90,7 +90,8 @@ public class RubyController : MonoBehaviour
 
         // ============== PROJECTILE ======================
 
-        if (Input.GetKeyDown(KeyCode.C))
+        var fireKey = Input.GetKeyDown(KeyCode.C) || Input.GetMouseButtonDown(0) || Input.GetButtonDown("Fire1") || Input.GetButton("Fire1");
+        if (fireKey)
             LaunchProjectile();
         
         // ======== DIALOGUE ==========
