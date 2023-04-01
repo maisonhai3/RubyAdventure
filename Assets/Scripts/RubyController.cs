@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class RubyController : MonoBehaviour
 {
@@ -41,6 +44,7 @@ public class RubyController : MonoBehaviour
     // ================= SOUNDS =======================
     AudioSource audioSource;
     
+    
     void Start()
     {
         // =========== MOVEMENT ==============
@@ -55,6 +59,8 @@ public class RubyController : MonoBehaviour
         
         // ==== AUDIO =====
         audioSource = GetComponent<AudioSource>();
+        
+        // Get the Gamepad
     }
 
     void Update()
@@ -92,8 +98,11 @@ public class RubyController : MonoBehaviour
 
         var fireKey = Input.GetKeyDown(KeyCode.C) || Input.GetMouseButtonDown(0) || Input.GetButtonDown("Fire1") || Input.GetButton("Fire1");
         if (fireKey)
+        {
             LaunchProjectile();
-        
+            MakeXboxControllerVibrateForSeconds(0.1f);
+        }
+
         // ======== DIALOGUE ==========
         if (Input.GetKeyDown(KeyCode.X))
         {
@@ -107,7 +116,18 @@ public class RubyController : MonoBehaviour
                 }  
             }
         }
- 
+    }
+    
+    private void MakeXboxControllerVibrateForSeconds(float seconds)
+    {
+        StartCoroutine(XboxControllerVibration(seconds));
+    }
+
+    private static IEnumerator XboxControllerVibration(float seconds)
+    {
+        Gamepad.current.SetMotorSpeeds(0.5f, 0.5f);
+        yield return new WaitForSeconds(seconds);
+        Gamepad.current.SetMotorSpeeds(0, 0);
     }
 
     void FixedUpdate()
