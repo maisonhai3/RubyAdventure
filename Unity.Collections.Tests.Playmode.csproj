@@ -12,11 +12,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{a0989bcc-b40d-5e41-a8c7-bec02df088f6}</ProjectGuid>
+    <ProjectGuid>{757a5190-84ae-50e1-ee8e-2a4b95c4d0f8}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Cinemachine.Editor.Tests</AssemblyName>
+    <AssemblyName>Unity.Collections.Tests.Playmode</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -41,8 +41,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <None Include="Library\PackageCache\com.unity.cinemachine@2.9.5\Tests\Editor\Cinemachine.Editor.Tests.asmdef" />
-     <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.5\Tests\Editor" />
+     <None Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.Tests.Playmode\FixedListPlayModeTests.tt" />
+     <Folder Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.Tests.Playmode" />
+     <None Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.Tests.Playmode\Unity.Collections.Tests.Playmode.asmdef" />
      <Reference Include="UnityEngine">
      <HintPath>E:\Programs\Unity\EditorVersions\2023.2.0a8\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>

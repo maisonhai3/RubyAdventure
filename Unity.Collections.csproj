@@ -12,11 +12,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{88ddab3d-7fca-e379-9af9-131bee71269d}</ProjectGuid>
+    <ProjectGuid>{cef0a439-09e5-a400-fa01-988659ea594c}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Unity.InputSystem.TestFramework</AssemblyName>
+    <AssemblyName>Unity.Collections</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -25,8 +25,8 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>Temp\Bin\Debug\Unity.InputSystem.TestFramework\</OutputPath>
-    <DefineConstants>UNITY_2023_2_0;UNITY_2023_2;UNITY_2023;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2023_1_OR_NEWER;UNITY_2023_2_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_MARSHALLING_TESTS;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;PLATFORM_INITIALIZES_MEMORY_MANAGER_EXPLICITLY;PLATFORM_SUPPORTS_WAIT_FOR_PRESENTATION;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;TEXTCORE_TEXT_ENGINE_1_5_OR_NEWER;UNITY_TESTS_FRAMEWORK;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <OutputPath>Temp\Bin\Debug\Unity.Collections\</OutputPath>
+    <DefineConstants>UNITY_2023_2_0;UNITY_2023_2;UNITY_2023;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2023_1_OR_NEWER;UNITY_2023_2_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_MARSHALLING_TESTS;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;PLATFORM_INITIALIZES_MEMORY_MANAGER_EXPLICITLY;PLATFORM_SUPPORTS_WAIT_FOR_PRESENTATION;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;TEXTCORE_TEXT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169,0649</NoWarn>
@@ -45,12 +45,72 @@
     <Analyzer Include="E:\Programs\Unity\EditorVersions\2023.2.0a8\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\Tests\TestFixture\AssemblyInfo.cs" />
-     <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\Tests\TestFixture\WinUserInput.cs" />
-     <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\Tests\TestFixture\InputTestRuntime.cs" />
-     <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\Tests\TestFixture\InputTestFixture.cs" />
-     <Folder Include="Library\PackageCache\com.unity.inputsystem@1.5.1\Tests\TestFixture" />
-     <None Include="Library\PackageCache\com.unity.inputsystem@1.5.1\Tests\TestFixture\Unity.InputSystem.TestFramework.asmdef" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\FixedList.gen.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\FixedStringParseMethods.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\BitField.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\NativeText.gen.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\NativeMultiHashMap.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\FixedStringUtils.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\NativeArrayExtensions.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\UnsafeNotBurstCompatible.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\NativeList.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\UnsafeHashMap.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\xxHash3.StreamingState.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\FixedStringMethods.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\AssemblyInfo.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\FixedString.gen.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\NativeSort.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\Attributes.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\Unicode.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\UnsafeBitArray.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\AllocatorManager.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\FixedStringFormat.gen.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\ConcurrentMask.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\JetBrains.Annotations.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\UnsafeHashSetExtensions.gen.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\UnsafeScratchAllocator.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\CollectionHelper.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\UnsafeRingQueue.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\xxHash3.AVX2.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\Memory.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\NativeBitArray.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\NativeHashSetExtensions.gen.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\UnsafeStream.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\FixedStringFormatMethods.gen.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\NativeNotBurstCompatible.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\NativeStream.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\Deprecated.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\UnsafeMultiHashMap.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\xxHash3.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\UTF8ArrayUnsafeUtility.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\DebugView.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\ListExtensions.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\BurstCompatibleAttribute.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\UnsafeHashSet.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\UnsafeList.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\NativeHashSet.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\UnsafeAtomicCounter.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\NativeQueue.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\HeapString.gen.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\NativeReference.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\FixedStringAppendMethods.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\UnsafeUtilityEx.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\UnsafeAppendBuffer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\RewindableAllocator.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\FixedStringInternalMethods.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\NativeHashMapExtensions.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\NativeHashMap.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\UnsafeText.cs" />
+     <None Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\NativeText.tt" />
+     <None Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\Unity.Collections.asmdef" />
+     <None Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\FixedList.tt" />
+     <None Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\FixedStringFormat.tt" />
+     <Folder Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections" />
+     <None Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\HeapString.tt" />
+     <None Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\FixedString.tt" />
+     <None Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\UnsafeHashSetExtensions.tt" />
+     <None Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\FixedStringFormatMethods.tt" />
+     <None Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections\NativeHashSetExtensions.tt" />
      <Reference Include="UnityEngine">
      <HintPath>E:\Programs\Unity\EditorVersions\2023.2.0a8\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -318,8 +378,44 @@
      <Reference Include="UnityEditor.UnityConnectModule">
      <HintPath>E:\Programs\Unity\EditorVersions\2023.2.0a8\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
+     <Reference Include="UnityEditor.Graphs">
+     <HintPath>E:\Programs\Unity\EditorVersions\2023.2.0a8\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+     <HintPath>E:\Programs\Unity\EditorVersions\2023.2.0a8\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.Android.Extensions">
+     <HintPath>E:\Programs\Unity\EditorVersions\2023.2.0a8\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.YamlDotNet">
+     <HintPath>E:\Projects\RubyAdventure\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Collections.LowLevel.ILSupport">
+     <HintPath>E:\Projects\RubyAdventure\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+     </Reference>
      <Reference Include="nunit.framework">
      <HintPath>E:\Projects\RubyAdventure\Library\PackageCache\com.unity.ext.nunit@2.0.3\net40\unity-custom\nunit.framework.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Plastic.Antlr3.Runtime">
+     <HintPath>E:\Projects\RubyAdventure\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Plastic.Newtonsoft.Json">
+     <HintPath>E:\Projects\RubyAdventure\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+     </Reference>
+     <Reference Include="log4netPlastic">
+     <HintPath>E:\Projects\RubyAdventure\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.IonicZip">
+     <HintPath>E:\Projects\RubyAdventure\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+     <HintPath>E:\Projects\RubyAdventure\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.TextureAssets">
+     <HintPath>E:\Projects\RubyAdventure\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
+     </Reference>
+     <Reference Include="unityplastic">
+     <HintPath>E:\Projects\RubyAdventure\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Android.Types">
      <HintPath>E:\Programs\Unity\EditorVersions\2023.2.0a8\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -695,17 +791,13 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.InputSystem.csproj">
-      <Project>{dff8dc67-b905-9045-24f1-9539fd900b65}</Project>
-      <Name>Unity.InputSystem</Name>
+    <ProjectReference Include="Unity.Burst.csproj">
+      <Project>{f5ded344-ac55-0ce3-52b0-3270a3b5af98}</Project>
+      <Name>Unity.Burst</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{8f26c914-f9a6-1936-eda5-1bcffac593d9}</Project>
-      <Name>UnityEngine.TestRunner</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{10bd98a1-fe52-70a4-67ee-568015f9343d}</Project>
-      <Name>UnityEditor.TestRunner</Name>
+    <ProjectReference Include="Unity.Mathematics.csproj">
+      <Project>{74f2121c-f71a-1346-be64-0aa9eb798bf0}</Project>
+      <Name>Unity.Mathematics</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{4cf11fd8-01db-d2c9-98a7-742c537d9b38}</Project>
