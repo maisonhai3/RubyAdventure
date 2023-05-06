@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace DesignPatterns
 {
@@ -11,7 +12,7 @@ namespace DesignPatterns
             // Do what the base class does
             base.Awake();
             
-            wanderBehavior = new FourDirectionWander();
+            wanderBehavior = new FreeWander();
         }
         private void Start()
         {
@@ -21,7 +22,10 @@ namespace DesignPatterns
         private void FixedUpdate()
         {
             // Move the robot the the position that wanderBehavior.NextDirection() returns
-            rigidBody.MovePosition(rigidBody.position + wanderBehavior.NextDirection());
+            // rigidBody.MovePosition(rigidBody.position + wanderBehavior.NextDirection());
+            
+            // Add a random force to the robot
+            rigidBody.AddForce(wanderBehavior.NextDirection());
         }
     }
 }
