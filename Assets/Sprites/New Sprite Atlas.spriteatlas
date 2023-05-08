@@ -36,10 +36,13 @@ SpriteAtlas:
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
-    packedSpriteRenderDataKeys: []
+    packedSpriteRenderDataKeys:
+    - ec73128b64458a947a9603ad250e5956: 21300000
   m_MasterAtlas: {fileID: 0}
-  m_PackedSprites: []
-  m_PackedSpriteNamesToIndex: []
+  m_PackedSprites:
+  - {fileID: 21300000, guid: ec73128b64458a947a9603ad250e5956, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - CharacterPortrait
   m_RenderDataMap: {}
   m_Tag: New Sprite Atlas
   m_IsVariant: 0
