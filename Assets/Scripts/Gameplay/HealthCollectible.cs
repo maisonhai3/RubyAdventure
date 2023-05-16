@@ -12,7 +12,7 @@ namespace Gameplay
             var rubyController = col.GetComponent<RubyController>();
             
             if (rubyController == null) return;
-            if (rubyController.Health > rubyController.maxHealth) return;
+            if (rubyController.health > rubyController.maxHealth) return;
             
             rubyController.ChangeHealth(1);
             rubyController.PlaySound(collectedClip);

@@ -189,22 +189,5 @@ public class RubyController : MonoBehaviour
 
     #region COLLISION
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        // If the "other" object is the worldLimiter, which is a Polygon Collider 2D, prevent the player from going through it
-        if (other.gameObject.layer == LayerMask.NameToLayer("WorldLimiter"))
-        {
-            var contact = other.GetContact(0);
-            var normal = contact.normal;
-            var dot = Vector2.Dot(normal, Vector2.up);
-            if (dot > 0.5f)
-                return;
-
-            var position = rigidbody2d.position;
-            position += contact.normal * contact.separation;
-            rigidbody2d.MovePosition(position);
-        }
-    }
-
     #endregion
 }
