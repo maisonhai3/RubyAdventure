@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Gameplay
 {
@@ -10,7 +11,8 @@ namespace Gameplay
         private AudioSource audioSource;
         private Animator animator;
         private Rigidbody2D rigidbody2D;
-        
+        private BoxCollider2D boxCollider2D;
+
         private Vector2 lookDirection = new(1, 0);
 
         public float speed = 3.0f;
@@ -25,13 +27,25 @@ namespace Gameplay
         private float horizontal;
         private float vertical;
 
+        public GameObject worldLimiter;
+
         private void Start()
         {
             rigidbody2D = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
             audioSource = GetComponent<AudioSource>();
+            boxCollider2D = GetComponent<BoxCollider2D>();
 
             currentHealth = maxHealth;
+            
+            GetXYBoundariesFromWorldLimiter();
+        }
+
+        private void GetXYBoundariesFromWorldLimiter()
+        {
+            // Get the world limiter's 4 vertices.
+            var vertices = new Vector3[4];
+            worldLimiter.GetComponent<MeshFilter>().mesh.vertices.CopyTo(vertices, 0);
         }
 
         private void Update()
@@ -81,6 +95,11 @@ namespace Gameplay
             position.x += speed * horizontal * Time.deltaTime;
             position.y += speed * vertical * Time.deltaTime;
 
+            MovingInBounds(position);
+        }
+
+        private void MovingInBounds(Vector2 position)
+        {
             rigidbody2D.MovePosition(position);
         }
 

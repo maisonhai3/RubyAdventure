@@ -1881,6 +1881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -4485,6 +4486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 544927424}
   - component: {fileID: 544927423}
+  - component: {fileID: 544927425}
   m_Layer: 9
   m_Name: WorldLimiter
   m_TagString: Untagged
@@ -4536,6 +4538,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &544927425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544927422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c14e4d09aa7147daba58ab6cdbdf23fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &564121732
 GameObject:
   m_ObjectHideFlags: 0
