@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using Random = UnityEngine.Random;
 
 /// <summary>
@@ -69,6 +68,8 @@ public class Enemy : MonoBehaviour
     private void FixedUpdate()
     {
         rigidbody2d.MovePosition(rigidbody2d.position + direction * speed * Time.deltaTime);
+        
+        //TODO: use AddForce
     }
 
     private void OnCollisionStay2D(Collision2D other)
